@@ -8,7 +8,7 @@
   .view-button {
       color: black;
       border: none;
-      padding: clamp(0.5rem, 1rem, 1rem) clamp(0.75rem, 1.5dvw, 1rem);
+      padding: clamp(0.5rem, 1rem, 1rem) clamp(5.5rem, 4dvw, 7rem);
       width: clamp(9rem, 10dvw, 12rem);
       display: inline-flex;
       align-items: center;

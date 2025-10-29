@@ -166,7 +166,7 @@
         position: relative;
         width: 80%;
         font-size: 4rem;
-        padding: 0 24px;
+        padding: 64 24px 0;
         margin: 64px auto 0;
     }
 
@@ -205,7 +205,7 @@
     }
 
     .estate-content-right-text {
-        padding: 0 36px;
+        padding: 0 24px;
         margin: 0;
     }
 
@@ -344,7 +344,7 @@
     }
 
     .estate-content-information-header, .estate-content-information p {
-        padding: 0 32px;
+        padding: 0 24px;
     }
 
     .mamm-stuff-grid {
@@ -425,6 +425,33 @@
 
         .mamm-stuff-grid {
             width: 85%;
+        }
+    }
+
+    @media (width < 768px) {
+        .mamm-stuff-grid {
+            width: 100%;
+        }
+
+        .estate-content {
+            width: 93.48%;
+            padding: 0 12px;
+        }
+
+        .estate-content-information {
+            width: 93.48%;
+        }
+
+        .estate-content-information-header, .estate-content-information p {
+            padding: 0 12px;
+        }
+
+        .button-container {
+            width: calc(82dvw - 32px);
+        }
+
+        #property-heading {
+            padding: 0 0 32px;
         }
     }
 </style>

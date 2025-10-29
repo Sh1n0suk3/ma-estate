@@ -83,7 +83,7 @@
   .heading {
     font-size: 4rem;
     padding: 0 24px;
-    margin: 64px auto;
+    margin: 64px auto 32px;
     width: 80%;
   }
 
@@ -120,4 +120,16 @@
 			border-radius: 18px;
 			animation: revealImage 2000ms ease-in 0s;
 	}
+
+  @media (width < 768px) {
+    .gay-ma {
+      padding: 0 12px;
+      width: 84dvw;
+    }
+
+    .gay-ma-stuff-item-small {
+      padding: 12px;
+      width: 84dvw;
+    }
+  }
 </style>
