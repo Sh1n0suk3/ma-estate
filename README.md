@@ -1,4 +1,2 @@
-# ma-estate
-An imaginary Real Estate Website build with Svelte
-
-Compiled Svelte code so people can't copy my homework
+# Ma Estate
+## An imaginary Real Estate Website built with Svelte
