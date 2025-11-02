@@ -104,7 +104,7 @@
 
 	@media (width < 768px) {
 			:root {
-				font-size: 16px;
+				font-size: 12px;
 		}
 	}
 
@@ -129,7 +129,7 @@
 
 	@media (width < 768px) {
 		.navbar {
-			gap: 2rem;
+			gap: 1.75rem;
 		}
 	}
 
@@ -392,7 +392,7 @@
 			}
 
 			:global(p.caption) {
-				margin-bottom: 168px;
+				margin-bottom: 144px;
 			}
 
 			:global(.responsive-media) {
@@ -609,7 +609,7 @@
 		}
 
 		:global(.responsive-media-small-feature) {
-			width: clamp(128px, 16dvw, 256px);
+			width: clamp(128px, 36dvw, 256px);
 			height: 100%;
 		}
 	}
