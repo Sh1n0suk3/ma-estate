@@ -69,7 +69,7 @@
     </div>
   </div>
   <div class="gay-ma-stuff-item-small super-gay-ma-stuff-item-small neumorphism">
-    <img loading="lazy" class="responsive-media" alt="" src="/img/bestcssdev.webp">
+    <img loading="lazy" class="gay-responsive-media" alt="" src="/img/bestcssdev.webp">
     <h3 class="caption-small">As always, the <s>worst</s> best CSS developer award goes to Ma</h3>
     <p class="caption-small"><em>It's a Certified Ma CSS™. Please don't look at it, I swear.</em></p>
   </div>
@@ -97,7 +97,7 @@
     width: 80%;
     padding: 12px 24px;
     margin: 24px auto;
-    border-radius: 18px;
+    border-radius: 16px;
     background: var(--fourth-color-brighter);
     font-size: 1.25rem;
     line-height: 1.6;
@@ -111,7 +111,7 @@
       padding: 24px;
       margin: auto;
 			background: var(--fourth-color-brighter);
-      border-radius: 18px;
+      border-radius: 16px;
 			transition: all 300ms ease;
 			display: flex;
     	gap: 8px;
@@ -132,9 +132,15 @@
 			height: auto;
 			object-fit: cover;
 			display: inline-block;
-			border-radius: 18px;
+			border-radius: 16px;
 			animation: revealImage 2000ms ease-in 0s;
 	}
+
+  .gay-responsive-media {
+				width: 100%;
+				height: 100%;
+        border-radius: 16px;
+			}
 
   @media (width < 768px) {
     .gay-ma {

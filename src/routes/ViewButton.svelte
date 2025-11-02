@@ -18,7 +18,7 @@
       font-size: 1.5rem;
       text-decoration: none;
       box-sizing: border-box;
-      border-radius: 18px;
+      border-radius: 16px;
       cursor: pointer;
       transition: all 0.3s ease;
       background-color: var(--fourth-color-brighter);

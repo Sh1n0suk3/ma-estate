@@ -308,7 +308,7 @@
         break-inside: avoid;
         padding: 24px;
 		background: var(--fourth-color-brighter);
-        border-radius: 18px;
+        border-radius: 16px;
         }
 
 	/* :global(.neumorphism) {
@@ -373,7 +373,7 @@
 			object-fit: cover;
 			display: block;
 			margin: 0 auto;
-			border-radius: 18px;
+			border-radius: 16px;
 			animation: revealImage 2000ms ease-in 0s;
 		}
 
@@ -440,7 +440,7 @@
         	padding: 24px;
 			margin: auto;
 			background: var(--fourth-color-brighter);
-        	border-radius: 18px;
+        	border-radius: 16px;
 			transition: all 300ms ease;
 			display: flex;
     		gap: 8px;
@@ -459,7 +459,7 @@
 			object-fit: cover;
 			display: inline-block;
 			margin: 0;
-			border-radius: 18px;
+			border-radius: 16px;
 			animation: revealImage 2000ms ease-in 0s;
 		}
 
@@ -592,12 +592,12 @@
 		margin: auto;
 		background: var(--fourth-color-brighter);
         display: flex;
-        border-radius: 18px;
+        border-radius: 16px;
     }
 
 	:global(.responsive-media-small-feature) {
 		width: clamp(128px, 14dvw, 256px);
-		border-radius: 18px;
+		border-radius: 16px;
 		height: 100%;
 		object-fit: cover;
 	}
