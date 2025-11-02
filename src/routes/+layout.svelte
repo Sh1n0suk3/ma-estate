@@ -4,11 +4,6 @@
 
 <svelte:head>
 	<title>Ma Estate</title>
-	<meta property="og:title" content="Hello, Ma!">
-    <meta property="og:description" content="At Ma Estate, we aren't just developers. We create a new way of living. We believe a home is more than a building; it is an involuntary, life-altering event.">
-    <meta property="og:image" content="https://www.notma.org/img/ma-meme-embed.webp">
-    <meta property="og:url" content="https://estate.notma.org/">
-    <meta property="og:type" content="website">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </svelte:head>
 
