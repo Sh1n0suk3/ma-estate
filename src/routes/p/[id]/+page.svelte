@@ -435,7 +435,7 @@
 
         .estate-content {
             width: 93.48%;
-            padding: 0 12px;
+            padding: 0 16px;
         }
 
         .estate-content-information {
@@ -443,11 +443,11 @@
         }
 
         .estate-content-information-header, .estate-content-information p {
-            padding: 0 12px;
+            padding: 0 24px;
         }
 
         .button-container {
-            width: calc(82dvw - 32px);
+            width: calc(82dvw - 16px);
         }
 
         #property-heading {

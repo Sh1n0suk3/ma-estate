@@ -64,8 +64,14 @@
     <div>
         <h3 class="caption-small">Ma, the developer</h3>
         <p class="caption-small"><em>Ma will be Ma. And always be Ma.</em></p>
-        <p class="caption-small">This website was a Certified Ma Moment™ to create (I mean it took forever to build this very Ma site). Learn Svelte, design layout, write code, see elements look disproportionate, enter the <strong>CSS nightmare</strong>, refine, write some Ma stuff, and finally... publish. Awwww! If it looks broken, it's not. It's just very <em>Ma</em>.</p>
+        <p class="caption-small">This website was a Certified Ma Moment™ to create (I mean it took forever to build this very Ma site). Learn Svelte, design layout, write code, see elements look disproportionate, enter the <strong>CSS nightmare</strong>, refine, write some Ma stuff, and finally... publish. Awwww! If it looks broken, it's not. It's just very <em>Ma</em> (but might be fixed.)</p>
         <p class="caption-small">Built with <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">Svelte</a>.</p>
+    </div>
+  </div>
+  <div class="gay-ma-stuff-item-small super-gay-ma-stuff-item-small neumorphism">
+    <img loading="lazy" class="responsive-media" alt="" src="/img/bestcssdev.webp">
+    <h3 class="caption-small">As always, the <s>worst</s> best CSS developer award goes to Ma</h3>
+    <p class="caption-small"><em>It's a Certified Ma CSS™. Please don't look at it, I swear.</em></p>
   </div>
   </AOS>
 
@@ -110,6 +116,15 @@
 			display: flex;
     	gap: 8px;
       line-height: 1.6;
+      margin: 24px auto;
+  }
+
+  .super-gay-ma-stuff-item-small {
+    flex-direction: column;
+  }
+
+  .super-gay-ma-stuff-item-small h3 {
+    margin-top: 16px;
   }
 
   .gay-responsive-media-small { 
@@ -123,12 +138,12 @@
 
   @media (width < 768px) {
     .gay-ma {
-      padding: 0 12px;
+      padding: 0 16px;
       width: 84dvw;
     }
 
     .gay-ma-stuff-item-small {
-      padding: 12px;
+      padding: 16px;
       width: 84dvw;
     }
   }

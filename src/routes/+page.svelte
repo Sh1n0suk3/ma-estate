@@ -45,10 +45,10 @@
     <div class="fs-content-right">
         <div>
             <AOS animate="fade-up" ease="ease-out-cubic" delay={0} duration={1250} distance="35px">
-                <h1 id="hero-heading" >Experience</h1>
+                <h1 id="hero-heading" contenteditable="true">Experience</h1>
             </AOS>
             <AOS animate="fade-up" ease="ease-out-cubic" delay={150} duration={1250} distance="35px">
-                <h1 id="hero-heading">Ma House</h1>
+                <h1 id="hero-heading" contenteditable="true">Ma House</h1>
             </AOS>
             <AOS animate="fade-up" ease="ease-out-cubic" delay={300} duration={1250} distance="35px">
                 <ViewButtonBorder text="Properties" href="/#properties" />

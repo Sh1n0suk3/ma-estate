@@ -23,7 +23,7 @@
 
 
 <footer>
-	<p>&copy; 2025 {name}. Copying Ma homework will result in sussy Ma activities.</p>
+	<p contenteditable="true">&copy; 2025 {name}. Copying Ma homework will result in sussy Ma activities.</p>
 </footer>
 
 <style>
@@ -104,7 +104,7 @@
 
 	@media (width < 768px) {
 			:root {
-				font-size: 12px;
+				font-size: 16px;
 		}
 	}
 
@@ -143,7 +143,7 @@
 	.logo {
 		color: var(--primary-color);
 		margin-right: auto;
-		font-weight: 500;
+		font-weight: 600;
 	}
 
 	main {
@@ -165,6 +165,8 @@
 		display: flex;
 		/* height: 864px; */
 		height: 100vh;
+		min-height: 512px;
+		max-height: 1080px;
 		width: 100%;
 		margin: 0;
 	}
@@ -186,7 +188,7 @@
 	:global(.fs-content-right) {
 		position: absolute;
 		color: white;
-		top: 25%;
+		top: 20%;
 		right: 7.5%;
 		text-align: right;
 		font-size: 4rem;
@@ -203,7 +205,7 @@
 
 	@media (width < 768px) {
 		:global(.fs-content-right) {
-			font-size: 2.5rem;
+			font-size: 2.75rem;
 		}
 	}
 
@@ -240,14 +242,16 @@
 	:global(.first-section .bg-image) {
 		position: absolute;
 		width: 100%;
-    	height: 125%;
+    	height: 100vh;
+		min-height: 512px;
+		max-height: 1080px;
 		object-fit: cover;
 		background-size: cover;
 		background-repeat: no-repeat;
 		/* clip-path: polygon(0 0, 95% 0, 70% 100%, 0% 100%); */
 		/* animation: clipReveal 2s ease-in-out 0s forwards; */
 		animation: revealImage 1500ms ease-in;
-		transition: all 2500ms ease-in;
+		/* transition: all 2500ms ease-in; */
 		z-index: -2;
 	}
 
@@ -268,7 +272,7 @@
 	:global(.ss-content) {
 		color: inherit;
 		margin: 0 auto;
-		width: 85%;
+		width: 90%;
 	}
 
 	:global(.ss-content h2) {
@@ -280,11 +284,17 @@
 		font-size: 1.25rem;
 	}
 
+	@media (width > 768px) {
+		:global(.ss-content h2, .ss-content p) {
+			padding: 0 5%;
+		}
+	}
+
 	:global(.ma-stuff-grid) { 
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-start;
 		gap: 1.75dvw;
 		margin: 0 auto;
     }
@@ -342,18 +352,19 @@
 
 		:global(.caption-price) {
 			font-size: 2.25rem !important;
-			margin: auto 0;
-			padding: 4px 8px;
+			margin: 0;
+			padding: 4px 8px !important;
 			opacity: 0.9;
 		}
 
 		:global(h3.caption) { 
 			font-size: 2.25rem !important;
-			padding: 0px 8px;
+			padding: 0 8px;
 		}
 
 		:global(p.caption) {
 			margin-bottom: 84px;
+			padding: 0 8px !important;
 		}
 
 		:global(.responsive-media) { 
@@ -381,7 +392,7 @@
 			}
 
 			:global(p.caption) {
-				margin-bottom: 144px;
+				margin-bottom: 168px;
 			}
 
 			:global(.responsive-media) {
@@ -399,7 +410,7 @@
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				width: calc(77dvw - 24px);
+				width: calc(77dvw - 36px);
     			gap: clamp(8px, 12px, 24px);
 			}
 		}
@@ -412,8 +423,12 @@
 
 		@media (width < 768px) {
 			:global(.ma-stuff-item) {
-				padding: 12px;
+				padding: 16px;
 				width: 84dvw;
+			}
+
+			:global(.ma-stuff-item .button-container) {
+				width: calc(84dvw - 28px);
 			}
 		}
 
@@ -533,7 +548,7 @@
 		height: fit-content;
 		color: inherit;
 		margin: 0 auto;
-		width: 85%;
+		width: 90%;
 	}
 
 	
@@ -541,6 +556,16 @@
 	:global(.ts-content h2) {
 		font-size: 4rem;
 		margin-top: 64px;
+	}
+
+	@media (width > 768px) {
+		:global(.ts-content h2, .ts-content p) {
+			padding: 0 5%;
+		}
+
+		:global(.caption-small) {
+			padding: 0 !important;
+		}
 	}
 
 	:global(.content-details) {
@@ -592,7 +617,7 @@
 	@media (width < 768px) {
 		:global(.ma-stuff-item-small-feature) {
 			width: 84dvw;
-			padding: 12px;
+			padding: 16px;
 		}
 	}
 
