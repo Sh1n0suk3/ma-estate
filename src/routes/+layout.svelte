@@ -27,7 +27,8 @@
 </footer>
 
 <style>
-
+	
+	/*
 	@font-face {
 		font-family: 'DM Sans';
 		src: url('/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
@@ -54,6 +55,37 @@
 		src: url('/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf') format('truetype');
 		font-weight: 400;
 		font-style: italic;
+	}
+	
+
+	@font-face {
+		font-family: 'Josefin Sans';
+		src: url('/fonts/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+		font-weight: 100 700;
+		font-style: normal;
+	}
+	
+
+	@font-face {
+		font-family: 'Josefin Sans';
+		src: url('/fonts/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+		font-weight: 100 700;
+		font-style: italic;
+	}
+		*/
+
+	@font-face {
+		font-family: 'Yeseva One';
+		src: url('/fonts/Yeseva_One/YesevaOne-Regular.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'Poppins';
+		src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+		font-weight: 400;
+		font-style: normal;
 	}
 
 	:root {
@@ -92,13 +124,13 @@
 
 	:global(body) {
 		margin: 0;
-		font-family: 'DM Sans', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		background-color: black;
 		color: var(--primary-color);
 	}
 
 	:global(h1, h2) {
-		font-family: 'DM Serif Display';
+		font-family: 'Yeseva One';
 		letter-spacing: -1px;
 	}
 
@@ -118,6 +150,14 @@
 		width: 100%;
 		height: 24px;
 	}
+
+	/*
+	@supports (-webkit-touch-callout: none) {
+		header {
+			background-color: var(--secondary-color);
+		}
+	}
+		*/
 
 	.navbar {
 		display: flex;

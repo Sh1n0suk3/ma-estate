@@ -70,6 +70,8 @@
     onMount(() => {
         isLoaded = true;
     });
+
+    let floatingPurchaseButtonVisible = false;
 </script>
 
 {#if isLoaded}
@@ -370,6 +372,7 @@
             flex-direction: column-reverse;
             width: 85%;
             min-height: none;
+            gap: 32px;
         }
 
         .estate-content-right {
