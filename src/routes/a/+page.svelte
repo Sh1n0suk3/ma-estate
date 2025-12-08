@@ -79,78 +79,77 @@
 {/if}
 
 <style>
-  .ma {
-    background-color: var(--fourth-color);
-		height: fit-content;
-    padding-top: 24px;
-    padding-bottom: 32px;
-  }
+    .ma {
+        background-color: var(--fourth-color);
+        height: fit-content;
+        padding-top: 24px;
+        padding-bottom: 32px;
+    }
 
-  .heading {
-    font-size: 4rem;
-    padding: 0 24px;
-    margin: 64px auto 32px;
-    width: 80%;
-  }
+    .heading {
+        font-size: 4rem;
+        padding: 0 24px;
+        margin: 64px auto 32px;
+        width: 80%;
+    }
 
-  .gay-ma {
-    width: 80%;
-    padding: 12px 24px;
-    margin: 24px auto;
-    border-radius: 16px;
-    background: var(--fourth-color-brighter);
-    font-size: 1.25rem;
-    line-height: 1.6;
-  }
-
-  .gay-ma-stuff-item-small {
-			position: relative;
-			width: 80%;
-			height: fit-content; /* 589px */
-      break-inside: avoid;
-      padding: 24px;
-      margin: auto;
-			background: var(--fourth-color-brighter);
-      border-radius: 16px;
-			transition: all 300ms ease;
-			display: flex;
-    	gap: 8px;
-      line-height: 1.6;
-      margin: 24px auto;
-  }
-
-  .super-gay-ma-stuff-item-small {
-    flex-direction: column;
-  }
-
-  .super-gay-ma-stuff-item-small h3 {
-    margin-top: 16px;
-  }
-
-  .gay-responsive-media-small { 
-			width: 30%;
-			height: auto;
-			object-fit: cover;
-			display: inline-block;
-			border-radius: 16px;
-			animation: revealImage 2000ms ease-in 0s;
-	}
-
-  .gay-responsive-media {
-				width: 100%;
-				height: 100%;
-        border-radius: 16px;
-			}
-
-  @media (width < 768px) {
     .gay-ma {
-      padding: 0 16px;
-      width: 84dvw;
+        width: 80%;
+        padding: 12px 24px;
+        margin: 24px auto;
+        border-radius: 16px;
+        background: var(--fourth-color-brighter);
+        font-size: 1.25rem;
+        line-height: 1.6;
     }
 
     .gay-ma-stuff-item-small {
-      padding: 16px;
-      width: 84dvw;
+        position: relative;
+        width: 80%;
+        height: fit-content; /* 589px */
+        break-inside: avoid;
+        padding: 24px;
+        margin: 24px auto;
+        background: var(--fourth-color-brighter);
+        border-radius: 16px;
+        transition: all 300ms ease;
+        display: flex;
+        gap: 8px;
+        line-height: 1.6;
     }
-  }
+
+    .super-gay-ma-stuff-item-small {
+        flex-direction: column;
+    }
+
+    .super-gay-ma-stuff-item-small h3 {
+        margin-top: 16px;
+    }
+
+    .gay-responsive-media-small {
+        width: 30%;
+        height: auto;
+        object-fit: cover;
+        display: inline-block;
+        border-radius: 16px;
+        animation: revealImage 2000ms ease-in 0s;
+    }
+
+    .gay-responsive-media {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+    }
+
+    @media (width < 768px) {
+        .gay-ma {
+            padding: 0 16px;
+            width: 84dvw;
+        }
+
+        .gay-ma-stuff-item-small {
+            padding: 16px;
+            width: 84dvw;
+        }
+    }
 </style>
