@@ -8,12 +8,13 @@
 </svelte:head>
 
 <header>
-	<nav class="navbar">
+	<nav class="navbar" aria-label="Main navigation">
 		<a href="/" class="logo">{name}</a>
-		<!-- <a href="/">Home</a> -->
-		<a class="navbar-right" href="/#properties">Properties</a>
-		<a class="navbar-right" href="/#features">Features</a>
-		<a class="navbar-right" href="/a/">About</a>
+		<ul class="navbar-links">
+			<li><a class="navbar-right" href="/#properties">Properties</a></li>
+			<li><a class="navbar-right" href="/#features">Features</a></li>
+			<li><a class="navbar-right" href="/a/">About</a></li>
+		</ul>
 	</nav>
 </header>
 
@@ -134,11 +135,13 @@
 		letter-spacing: -1px;
 	}
 
+	/*
 	@media (width < 768px) {
 			:root {
 				font-size: 12px;
 		}
 	}
+		*/
 
 	header {
 		position: fixed;
@@ -167,8 +170,25 @@
 		margin: 0 4dvw;
 	}
 
+	.navbar-links {
+		display: flex;
+		align-items: center;
+		gap: 4rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navbar-links li {
+		display: inline;
+	}
+
 	@media (width < 768px) {
 		.navbar {
+			gap: 1.75rem;
+		}
+
+		.navbar-links {
 			gap: 1.75rem;
 		}
 	}
@@ -345,11 +365,12 @@
 		width: 36dvw;
 		/* height: calc(389px + 12dvw); */
 		height: fit-content;
+		min-height: 36dvw;
         break-inside: avoid;
         padding: 24px;
 		background: var(--fourth-color-brighter);
         border-radius: 16px;
-        }
+    }
 
 	/* :global(.neumorphism) {
 		box-shadow: 18px 18px 48px #c5c5c5,

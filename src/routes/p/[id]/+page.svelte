@@ -17,7 +17,7 @@
     let borderDebug = $state(true);
 
     let currentImage = $state(data.property.src);
-    let previousImage;
+    let previousImage = $state(undefined);
     let intervalId;
 
     $effect(() => { 
@@ -76,9 +76,9 @@
 
 {#if isLoaded}
 <section class="estate-page" aria-labelledby="property-heading" >
-    <h2 id="property-heading"  in:fly={{ y: 35, duration: 1500, delay: 100 }}>Property Details</h2>
-    <div class="estate-content" >
-        <div class="estate-content-left neumorphism"  in:fly={{ y: 35, duration: 1500, delay: 300}}>
+    <h2 id="property-heading" in:fly={{ y: 35, duration: 1250, delay: 100 }}>Property Details</h2>
+    <article class="estate-content">
+        <div class="estate-content-left neumorphism" in:fly={{ y: 35, duration: 1250, delay: 200}} role="region" aria-label="Property image gallery">
             <div class="image-container">
                 <div class="full-media-container">
                     {#key currentImage}
@@ -92,9 +92,9 @@
                         {/key}
                     {/each}
                 </div>
-                </div>
+            </div>
         </div>
-        <div class="estate-content-right neumorphism"  in:fly={{ y: 35, duration: 1500, delay: 600}}>
+        <div class="estate-content-right neumorphism" in:fly={{ y: 35, duration: 1250, delay: 400}}>
             <div class="estate-content-right-text">
                 <h3>{data.property.name}</h3>
                 <p>{data.property.description}</p>
@@ -112,24 +112,24 @@
                 <p class="property-price">Price: {data.property.price}</p>
             </div>
             <div class="button-container">
-            <ViewButton text="Purchase" href="/vid/rr.mp4"/>
-            <ViewButton text="Contact Sales" href="/vid/rr.mp4" />
+                <ViewButton text="Purchase" href="/vid/rr.mp4"/>
+                <ViewButton text="Contact Sales" href="/vid/rr.mp4" />
             </div>
         </div>
-    </div>
+    </article>
     <AOS animate="fade-up" ease="ease-out-cubic" delay={100} duration={1250} distance="35px">
-    <div class="estate-content-information neumorphism">
+    <article class="estate-content-information neumorphism">
         <h3 class="estate-content-information-header">Information</h3>
         <p>{@html data.property.information}</p>
-    </div>
+    </article>
     </AOS>
-    <div>
+    <aside aria-labelledby="related-heading">
         <AOS animate="fade-up" ease="ease-out-cubic" delay={100} duration={1250} distance="35px">
         <h2 id="property-heading">You May Also Like</h2>
         </AOS>
-        <div class="mamm-stuff-grid">
+        <div class="mamm-stuff-grid" role="list">
             {#each otherProperties as prop, i (prop.id)}
-                        <AOS animate="fade-up" ease="ease-out-cubic" delay={100 + i * 300} duration={1250} distance="35px" onupdate={(visible) => { prop.visible = true }}><div>
+                        <AOS animate="fade-up" ease="ease-out-cubic" delay={100 + i * 100} duration={1250} distance="35px" onupdate={(visible) => { prop.visible = true }}><div>
                                 <EstateCard 
                                     name={prop.name} 
                                     description={prop.description}
@@ -144,7 +144,7 @@
                         </AOS>
             {/each}
         </div>
-    </div>
+    </aside>
 </section>
 {/if}
 
@@ -167,8 +167,8 @@
         position: relative;
         width: 80%;
         font-size: 4rem;
-        padding: 64px 24px 0;
-        margin: 64px auto 0;
+        padding: 0 24px;
+        margin: 0 auto;
     }
 
     .estate-content {
@@ -178,7 +178,7 @@
         flex-direction: row;
         height: fit-content;
         margin: 0 auto;
-        gap: 64px;
+        gap: 32px;
     }
 
     .estate-content-left {
@@ -190,6 +190,7 @@
         justify-content: flex-start;
         border-radius: 16px;
         background-color: var(--fourth-color-brighter);
+        margin: 0;
     }
 
     .estate-content-right {

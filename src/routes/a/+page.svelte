@@ -11,9 +11,9 @@
 </script>
 
 {#if isLoaded}
-<section class="ma">
-  <h2 class="heading" in:fly={{ y: 35, duration: 1500, delay: 100 }}>About</h2>
-  <div class="gay-ma neumorphism" in:fly={{ y: 35, duration: 1500, delay: 300 }}>
+<section class="ma" aria-labelledby="about-heading">
+  <h2 class="heading" id="about-heading" in:fly={{ y: 35, duration: 1500, delay: 100 }}>About</h2>
+  <article class="gay-ma neumorphism" in:fly={{ y: 35, duration: 1500, delay: 300 }}>
     <p style="text-align: justify;">
         At <a href="/">Ma Estate</a>, we aren't just developers. We create a new way of living. We believe a home is more than a building; it is an involuntary, life-altering event. Our mission is to provide a unique living experience, which our partners have officially called a <strong>Certified Ma Moment™</strong> after some very Ma analysis.
     </p>
@@ -26,7 +26,7 @@
         Our Core Commitments
     </h2>
 
-    <ul style="list-style: none; padding-left: 0;">
+    <ol style="list-style: none; padding-left: 0;">
         <li style="margin-bottom: 25px;">
             <h3 style="margin: 0 0 5px 0; color: #222;">
                 1. Uncompromising Architectural Vision
@@ -53,26 +53,28 @@
                 Buying a Ma Estate property automatically makes you part of our exclusive lifestyle program, which includes free Singha Drinking Water (now with Purra minerals). We organize many unique <strong>gay Ma</strong> community-building activities (such as loud gang-bang bathroom shit), all designed to be <strong>ABSOLUTELY</strong> wild. Certification is only granted if you survive.
             </p>
         </li>
-    </ul>
+    </ol>
     <p style="font-size: 0.9em; text-align: center; color: #555;">
         All formal complaints should be directed to <strong><a href="mailto:me@notma.org">me@notma.org</a></strong>.
     </p>
-  </div>
+  </article>
   <AOS animate="fade-up" ease="ease-out-cubic" delay={100} duration={1250} distance="35px">
-  <div class="gay-ma-stuff-item-small neumorphism">
-    <img loading="lazy" class="gay-responsive-media-small" alt="" src="/img/ma.webp">
-    <div>
+  <figure class="gay-ma-stuff-item-small neumorphism">
+    <img loading="lazy" class="gay-responsive-media-small" alt="Ma, the developer" src="/img/ma.webp">
+    <figcaption>
         <h3 class="caption-small">Ma, the developer</h3>
         <p class="caption-small"><em>Ma will be Ma. And always be Ma.</em></p>
         <p class="caption-small">This website was a Certified Ma Moment™ to create (I mean it took forever to build this very Ma site). Learn Svelte, design layout, write code, see elements look disproportionate, enter the <strong>CSS nightmare</strong>, refine, write some Ma stuff, and finally... publish. Awwww! If it looks broken, it's not. It's just very <em>Ma</em> (but might be fixed.)</p>
         <p class="caption-small">Built with <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer">Svelte</a>.</p>
-    </div>
-  </div>
-  <div class="gay-ma-stuff-item-small super-gay-ma-stuff-item-small neumorphism">
-    <img loading="lazy" class="gay-responsive-media" alt="" src="/img/bestcssdev.webp">
-    <h3 class="caption-small">As always, the <s>worst</s> best CSS developer award goes to Ma</h3>
-    <p class="caption-small"><em>It's a Certified Ma CSS™. Please don't look at it, I swear.</em></p>
-  </div>
+    </figcaption>
+  </figure>
+  <figure class="gay-ma-stuff-item-small super-gay-ma-stuff-item-small neumorphism">
+    <img loading="lazy" class="gay-responsive-media" alt="Best CSS developer award" src="/img/bestcssdev.webp">
+    <figcaption>
+        <h3 class="caption-small">As always, the <s>worst</s> best CSS developer award goes to Ma</h3>
+        <p class="caption-small"><em>It's a Certified Ma CSS™. Please don't look at it, I swear.</em></p>
+    </figcaption>
+  </figure>
   </AOS>
 
 </section>
@@ -122,7 +124,11 @@
         flex-direction: column;
     }
 
-    .super-gay-ma-stuff-item-small h3 {
+    .gay-ma-stuff-item-small figcaption {
+        display: block;
+    }
+
+    .super-gay-ma-stuff-item-small figcaption h3 {
         margin-top: 16px;
     }
 
