@@ -6,7 +6,7 @@
 
 <style>
   .view-button {
-      color: black;
+      color: var(--primary-color);
       border: none;
       padding: clamp(0.5rem, 1rem, 1rem) clamp(5.5rem, 6dvw, 7rem);
       width: clamp(9rem, 14dvw, 12rem);
