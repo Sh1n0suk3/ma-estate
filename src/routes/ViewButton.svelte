@@ -20,7 +20,7 @@
       box-sizing: border-box;
       border-radius: 16px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s, box-shadow 0.3s, color 0.3s ease;
       background-color: var(--fourth-color-brighter);
       border: 2px solid var(--primary-color-transparent);
   }

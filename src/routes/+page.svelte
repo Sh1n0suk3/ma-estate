@@ -69,7 +69,7 @@
         </header>
         <div class="ma-stuff-grid" role="list">
             {#each properties as property, i (property.name)}
-    				<AOS animate="fade-up" ease="ease-out-cubic" delay={50 + i * 200} duration={1250} distance="35px"><EstateCard {...property} href={`/p/${property.property}`} /></AOS>
+    				<AOS animate="fade-up" ease="ease-out-cubic" delay={50 + i * 50} duration={1250} distance="35px"><EstateCard {...property} href={`/p/${property.property}`} /></AOS>
             {/each}
         </div>
     </div>
@@ -86,7 +86,7 @@
         </header>
         <div class="ts-content-grid" role="list">
             {#each features as feature, i (feature.name)}
-    	    		<AOS animate="fade-up" ease="ease-out-cubic" delay={50 + i * 200} duration={1250} distance="35px"><FeatureCardSmall {...feature} /></AOS>
+    	    		<AOS animate="fade-up" ease="ease-out-cubic" delay={50 + i * 50} duration={1250} distance="35px"><FeatureCardSmall {...feature} /></AOS>
             {/each}
         </div>
     </div>

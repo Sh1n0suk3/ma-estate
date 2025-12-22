@@ -16,7 +16,7 @@
       text-decoration: none;
       border-radius: 16px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s, box-shadow 0.3s, color 0.3s ease;
       border: 2px solid white;
   }
 

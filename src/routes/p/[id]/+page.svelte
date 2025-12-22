@@ -129,7 +129,7 @@
         </AOS>
         <div class="mamm-stuff-grid" role="list">
             {#each otherProperties as prop, i (prop.id)}
-                        <AOS animate="fade-up" ease="ease-out-cubic" delay={100 + i * 100} duration={1250} distance="35px" onupdate={(visible) => { prop.visible = true }}><div>
+                        <AOS animate="fade-up" ease="ease-out-cubic" delay={100 + i * 50} duration={1250} distance="35px" onupdate={(visible) => { prop.visible = true }}><div>
                                 <EstateCard 
                                     name={prop.name} 
                                     description={prop.description}
@@ -168,7 +168,7 @@
         width: 80%;
         font-size: 4rem;
         padding: 0 24px;
-        margin: 0 auto;
+        margin: 64px auto 0;
     }
 
     .estate-content {

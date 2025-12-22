@@ -1,5 +1,25 @@
 <script>
 	import { name } from '$lib/constants';
+	import { onMount } from 'svelte';
+	import { slide } from 'svelte/transition';
+
+	let screenWidth = $state(0);
+	
+	onMount(() => {
+		screenWidth = window.innerWidth;
+		
+		const handleResize = () => {
+			screenWidth = window.innerWidth;
+		};
+		
+		window.addEventListener('resize', handleResize);
+		
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	});
+
+	let mobileNavVisible = $state(false);
 </script>
 
 <svelte:head>
@@ -7,14 +27,21 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
 </svelte:head>
 
-<header>
+<header class:screen-navbar-visible={mobileNavVisible}>
 	<nav class="navbar" aria-label="Main navigation">
 		<a href="/" class="logo">{name}</a>
-		<ul class="navbar-links">
-			<li><a class="navbar-right" href="/#properties">Properties</a></li>
-			<li><a class="navbar-right" href="/#features">Features</a></li>
-			<li><a class="navbar-right" href="/a/">About</a></li>
-		</ul>
+		<div class="navbar-menu-container">
+			{#if screenWidth <= 768}
+				<button onclick={() => mobileNavVisible = !mobileNavVisible} class="navbar-menu"><img src="/svg/menu.svg"></button>
+			{/if}
+			{#if mobileNavVisible || screenWidth > 768}
+				<ul class="navbar-links" transition:slide={{ duration: 200, axis: 'y' }} onclick={() => mobileNavVisible = false}>
+					<li><a class="navbar-right" href="/#properties">Properties</a></li>
+					<li><a class="navbar-right" href="/#features">Features</a></li>
+					<li><a class="navbar-right" href="/a/">About</a></li>
+				</ul>
+			{/if}
+		</div>
 	</nav>
 </header>
 
@@ -183,13 +210,58 @@
 		display: inline;
 	}
 
-	@media (width < 768px) {
+	@media (width <= 768px) {
+
+		header {
+			height: fit-content;
+			transition: border-radius 200ms ease-in-out;
+		}
+
+		header.screen-navbar-visible {
+			border-bottom-left-radius: 32px;
+			border-bottom-right-radius: 32px;
+		}
+
 		.navbar {
-			gap: 1.75rem;
+			transition: all 300ms ease;
+		}
+		
+
+		.navbar-menu-container {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
 		}
 
 		.navbar-links {
-			gap: 1.75rem;
+			position: static;
+			top: 100%;
+			right: 0;
+			margin-top: 1rem;
+			padding: 1.5rem 0;
+			gap: 1.75rem 0;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: flex-start;
+		}
+
+		.navbar-menu {
+			background: none;
+			border: none;
+			cursor: pointer;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.navbar-menu img {
+			width: 32px;
+			height: 32px;
+			filter: invert(100%);
+			display: block;
 		}
 	}
 
@@ -484,8 +556,9 @@
 
 		@media (width < 768px) {
 			:global(.ma-stuff-item) {
-				padding: 16px;
+				padding: 16px 16px 48px;
 				width: 84dvw;
+
 			}
 
 			:global(.ma-stuff-item .button-container) {
@@ -539,6 +612,7 @@
 		:global(h3.caption-small) { 
 			font-size: 3rem;
 			line-height: 1;
+			margin-bottom: 8px !important;
 		}
 
 		:global(.button-container-small) {
@@ -678,6 +752,7 @@
 	@media (width < 768px) {
 		:global(.ma-stuff-item-small-feature) {
 			width: 84dvw;
+			height: calc(464px - 24dvw);
 			padding: 16px;
 		}
 	}
